@@ -1,0 +1,19 @@
+import pathlib
+
+from chialisp_builder import ChialispBuild
+
+from chialisp_stdlib import STABLE_INCLUDE_DIRECTORY
+
+PUZZLE_PATHS = [
+    pathlib.Path(_)
+    for _ in [
+        "p2_conditions.clsp",
+        "p2_delegated_puzzle_or_hidden_puzzle.clsp",
+        "calculate_synthetic_public_key.clsp",
+    ]
+]
+
+BUILD_ARGUMENTS = {
+    puzzle_path.with_suffix(".hex").name: ChialispBuild([STABLE_INCLUDE_DIRECTORY])
+    for puzzle_path in PUZZLE_PATHS
+}
