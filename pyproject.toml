@@ -4,17 +4,15 @@ description = "Some canonical puzzles deployed on chia-blockchain"
 authors = [{name = "Richard Kiss", email = "him@richardkiss.com"}]
 license = {file = "LICENSE"}
 readme = "README.md"
-src_root = "."
-packages = ["chialisp_puzzles"]
 version = "0.1.0"
 dependencies = ["chialisp_loader>=0.1.0"]
 
 [build-system]
 requires = [
-    "pytoml>=0.1",
-    "enscons",
+    "setuptools>=42",
+    "wheel",
     "chialisp_builder>=0.1.0",
     "chialisp_stdlib>=0.1.0",
     "clvm_rs",
 ]
-build-backend = "enscons.api"
+build-backend = "setuptools.build_meta"
