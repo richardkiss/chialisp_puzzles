@@ -5,14 +5,15 @@ authors = [{name = "Richard Kiss", email = "him@richardkiss.com"}]
 license = {file = "LICENSE"}
 readme = "README.md"
 version = "0.1.0"
-dependencies = ["chialisp_loader>=0.1.0"]
+dependencies = ["chialisp_loader @ git+https://github.com/richardkiss/chialisp_loader@df25860501267bba215756a01eed3af2d2d0f911#egg=chialisp_loader"]
 
 [build-system]
 requires = [
     "setuptools>=42",
     "wheel",
     "chialisp_builder>=0.1.0",
-    "chialisp_stdlib>=0.1.0",
+    "chialisp_builder @ git+https://github.com/richardkiss/chialisp_builder@fef9bbab74fb14b27caa90d10b250b3bdc1bcbc3#egg=chialisp_builder",
+    "chialisp_stdlib @ git+https://github.com/richardkiss/chialisp_stdlib@6e71943ae2063e0b3cea9c05e344bc3855ba5b0e#egg=chialisp_stdlib",
     "clvm_rs",
 ]
 build-backend = "setuptools.build_meta"
